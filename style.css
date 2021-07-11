@@ -1,0 +1,203 @@
+/* *{
+    border: 1px solid black;
+}   */
+
+body{
+    background-color: #E3EDF2;
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    height: 100vh;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .5fr 1fr 2fr .5fr;
+    grid-template-areas:
+        "header header header header"
+        "intro intro intro intro"
+        "main main main main"
+        "footer footer footer footer"
+    ;
+}
+.chat {
+    position: fixed;
+    bottom:auto; 
+    bottom: 0;
+    right: 0;
+    padding: 2%;
+     
+}
+
+/* HEADER contents start here  */
+header {
+    padding-left: 10%;
+    padding-right: 10%;
+    grid-area: header;
+    /* background-color: salmon; */
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "title page"
+    ;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    height: 70px;
+    align-items: center;
+}
+
+/* title { 
+    grid-area: title;
+    font-size: medium;
+} */
+
+#page {
+    grid-area: page;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+/* ANIMATIONS start here  */
+title:hover{
+    color:#f5ad8e;
+    font-weight: bold;
+    font-size: 18.5px;
+} 
+.about:hover{
+    color:black;
+    font-weight: bold;
+    font-size: 18.5px;
+}
+.resume:hover{
+    color:black;
+    font-weight: bold;
+    font-size: 18.5px;
+}
+.contact:hover{
+    color:black;
+    font-weight: bold;
+    font-size: 18.5px;
+}
+
+
+
+
+/* INTRO section starts here  */
+#intro {
+    line-height: 1.5;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 25pt;
+    grid-area: intro;
+    /* justify-self: center;
+    align-items: flex-start; */
+    /* margin: 2%; */
+    text-align: left;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "p p";    
+}
+/* .stroke {
+    color: black;
+  -webkit-text-fill-color: white; 
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+} */
+
+/* .icon {
+    grid-area: icon;
+    object-fit: scale-down;
+    border-radius: 50%;
+    border-color: black 1px;
+
+} */
+p {
+    grid-area: p;
+    padding-left: 2%;
+}
+
+/* main contents start here */
+
+main {
+    margin-left: 5%;
+    margin-right: 5%;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "content1 content1"
+        "content2 content3"
+    ;
+    /* display: flex; */
+
+}
+.content1 {
+    grid-area: content1;
+    width: 100%;
+    height: 400px;
+    padding-bottom: 10%;;
+}
+
+/* .caseTitle p {
+    justify-self: center;
+} */
+
+.content2 {
+    grid-area: content2;
+    text-align: wrap;
+    width: 80%;
+    height: 400px;
+    margin: 10%;
+}
+
+.content3 {
+    
+    grid-area: content3;
+    text-align: wrap;
+    width: 80%;
+    height: 400px;
+    margin: 10%;
+}
+
+/* .contentImg {
+    object-fit: cover;
+    width: 50%;
+    height: 50%;
+    
+}  */
+
+/* FOOTER starts here */
+
+footer {
+    grid-area: footer;
+}
+.ssmedia { 
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly; 
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 5%;
+    color: black;
+    
+}
+.hamburger {
+    grid-area: sidebar;
+}
+/* @media screen and (max-width: 414px;) {
+
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "nav sidebar"
+        "intro intro"
+        "hero1 hero1"
+        "hero2 hero2"
+
+    }
+}
